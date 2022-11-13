@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-
+import Networking
 @main
 struct Product_ListApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(productService: ProductService())
         }
     }
 }

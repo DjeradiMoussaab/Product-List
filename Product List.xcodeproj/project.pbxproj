@@ -11,6 +11,9 @@
 		BD94AE212920091B00FCFEFC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD94AE202920091B00FCFEFC /* ContentView.swift */; };
 		BD94AE232920091E00FCFEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD94AE222920091E00FCFEFC /* Assets.xcassets */; };
 		BD94AE262920091E00FCFEFC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD94AE252920091E00FCFEFC /* Preview Assets.xcassets */; };
+		BD94AE2D29200ADB00FCFEFC /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD94AE2C29200ADB00FCFEFC /* Product.swift */; };
+		BD94AE31292010A900FCFEFC /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = BD94AE30292010A900FCFEFC /* WebService */; };
+		BD94AE342920150A00FCFEFC /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = BD94AE332920150A00FCFEFC /* WebService */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,7 @@
 		BD94AE202920091B00FCFEFC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD94AE222920091E00FCFEFC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BD94AE252920091E00FCFEFC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BD94AE2C29200ADB00FCFEFC /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD94AE31292010A900FCFEFC /* WebService in Frameworks */,
+				BD94AE342920150A00FCFEFC /* WebService in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +57,7 @@
 		BD94AE1D2920091B00FCFEFC /* Product List */ = {
 			isa = PBXGroup;
 			children = (
+				BD94AE2E29200AE200FCFEFC /* Models */,
 				BD94AE1E2920091B00FCFEFC /* Product_ListApp.swift */,
 				BD94AE202920091B00FCFEFC /* ContentView.swift */,
 				BD94AE222920091E00FCFEFC /* Assets.xcassets */,
@@ -65,6 +72,14 @@
 				BD94AE252920091E00FCFEFC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		BD94AE2E29200AE200FCFEFC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD94AE2C29200ADB00FCFEFC /* Product.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +98,10 @@
 			dependencies = (
 			);
 			name = "Product List";
+			packageProductDependencies = (
+				BD94AE30292010A900FCFEFC /* WebService */,
+				BD94AE332920150A00FCFEFC /* WebService */,
+			);
 			productName = "Product List";
 			productReference = BD94AE1B2920091B00FCFEFC /* Product List.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +130,10 @@
 				Base,
 			);
 			mainGroup = BD94AE122920091B00FCFEFC;
+			packageReferences = (
+				BD94AE2F292010A900FCFEFC /* XCRemoteSwiftPackageReference "WebService" */,
+				BD94AE322920150A00FCFEFC /* XCRemoteSwiftPackageReference "WebService" */,
+			);
 			productRefGroup = BD94AE1C2920091B00FCFEFC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,6 +162,7 @@
 			files = (
 				BD94AE212920091B00FCFEFC /* ContentView.swift in Sources */,
 				BD94AE1F2920091B00FCFEFC /* Product_ListApp.swift in Sources */,
+				BD94AE2D29200ADB00FCFEFC /* Product.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +363,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BD94AE2F292010A900FCFEFC /* XCRemoteSwiftPackageReference "WebService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DjeradiMoussaab/WebService";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		BD94AE322920150A00FCFEFC /* XCRemoteSwiftPackageReference "WebService" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/DjeradiMoussaab/WebService";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BD94AE30292010A900FCFEFC /* WebService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD94AE2F292010A900FCFEFC /* XCRemoteSwiftPackageReference "WebService" */;
+			productName = WebService;
+		};
+		BD94AE332920150A00FCFEFC /* WebService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BD94AE2F292010A900FCFEFC /* XCRemoteSwiftPackageReference "WebService" */;
+			productName = WebService;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BD94AE132920091B00FCFEFC /* Project object */;
 }
